@@ -1,0 +1,29 @@
+make[1]: Entering directory '/home/dimz/Kuro-Kyaru-Merlinx/out'
+  GEN     ./Makefile
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+In file included from scripts/kconfig/zconf.tab.c:2470:
+../scripts/kconfig/symbol.c:1153:4: warning: misleading indentation; statement is not part of the previous 'if' [-Wmisleading-indentation]
+ 1153 |                         fprintf(stderr, "For a resolution refer to Documentation/kbuild/kconfig-language.txt\n");
+      |                         ^
+../scripts/kconfig/symbol.c:1150:3: note: previous statement is here
+ 1150 |                 if (stack->sym == last_sym)
+      |                 ^
+1 warning generated.
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --silentoldconfig Kconfig
+drivers/misc/mediatek/usb20/Kconfig:41:warning: prompt redefined
+***
+*** Configuration file ".config" not found!
+***
+*** Please run some configurator (e.g. "make oldconfig" or
+*** "make menuconfig" or "make xconfig").
+***
+make[3]: *** [../scripts/kconfig/Makefile:40: silentoldconfig] Error 1
+make[2]: *** [../Makefile:557: silentoldconfig] Error 2
+make[1]: *** No rule to make target 'include/config/auto.conf', needed by 'include/config/kernel.release'.  Stop.
+make[1]: Leaving directory '/home/dimz/Kuro-Kyaru-Merlinx/out'
+make: *** [Makefile:146: sub-make] Error 2
